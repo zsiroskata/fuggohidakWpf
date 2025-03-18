@@ -1,0 +1,30 @@
+﻿<Window x:Class="fuggohidak.NewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fuggohidak"
+        mc:Ignorable="d"
+        Title="NewWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="189" Margin="38,28,0,0" VerticalAlignment="Top" Width="464" />
+        <GroupBox Name="Kereses" HorizontalAlignment="Left" Height="140" Header="Keresés" Margin="133,272,0,0" VerticalAlignment="Top" Width="500">
+            <StackPanel Height="124">
+                <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
+                    <Label Content="Ország" Width="104"/>
+                    <ComboBox Width="120"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <CheckBox x:Name="EgyKm" Content="1 km-nél hosszabbak" Margin="0,0,0,0" Height="44" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Height="40" RenderTransformOrigin="0.5,0.5" Orientation="Horizontal" Width="200">
+                    <Button Content="Keresés" Width="100" VerticalAlignment="Center"/>
+                    <Button Content="Bezár" Width="100" VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+     
+        
+
+    </Grid>
+</Window>

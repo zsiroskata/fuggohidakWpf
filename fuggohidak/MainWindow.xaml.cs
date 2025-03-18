@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Microsoft.Win32;
+using System.IO;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Windows;
@@ -39,9 +40,42 @@ namespace fuggohidak
                 hidakNevei.Items.Add(item.Nev);
 
             }
+        }
+        private void MenuItemNew_Click(object sender, RoutedEventArgs e)
+        {
+            NewWindow newWindow = new NewWindow();
+            newWindow.Owner = this;
+            newWindow.Show();
+        }
 
+        private void MenuItemExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
 
+        private void MenuItemDialog_Click(object sender, RoutedEventArgs e)
+        {
+            NewWindow newWindow = new();
+            newWindow.Owner = this;
+            this.Visibility = Visibility.Hidden;
+            newWindow.Closed += (s, args) => this.Visibility = Visibility.Visible;
+            newWindow.ShowDialog();
+        }
 
+        private void Kilepes_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void MenuItemOpen_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                //előzetesen elhelyezzük a forrásfájlt a szokott helyen
+                string filePath = openFileDialog.FileName; //ide bekerül a fájl abszolút elérési útja
+                                                           //feldolgozzuk a forrásfájlt a szokott módon
+            }
         }
         private void hidakNevei_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

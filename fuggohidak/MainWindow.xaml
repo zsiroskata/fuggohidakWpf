@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Menu>
+            <MenuItem x:Name="MenuItemNew" Header="Keresés" Click="MenuItemNew_Click"/>
+            <MenuItem x:Name="MenuItemExit" Header="Kilépés" Click="MenuItemExit_Click"/>
+        </Menu>
         <ListBox x:Name="hidakNevei" HorizontalAlignment="Left" Height="234" Margin="43,44,0,0" VerticalAlignment="Top" Width="228" SelectionChanged="hidakNevei_SelectionChanged"/>
         <Label Content="Hely" HorizontalAlignment="Left" Height="34" Margin="332,44,0,0" VerticalAlignment="Top" Width="99"/>
         <Label Content="Ország" HorizontalAlignment="Left" Height="34" Margin="332,98,0,0" VerticalAlignment="Top" Width="99"/>
@@ -28,7 +32,6 @@
                 </StackPanel>
             </StackPanel>
         </GroupBox>
-        <Button x:Name="kilep" Content="Kilépés" HorizontalAlignment="Left" Height="38" Margin="476,326,0,0" VerticalAlignment="Top" Width="98"/>
-
+        <Button x:Name="Kilepes" Content="Kilépés" Click="Kilepes_Click" Margin="506,308,157,70"/>
     </Grid>
 </Window>
